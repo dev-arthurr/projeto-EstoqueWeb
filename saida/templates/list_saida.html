@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block product %}
+
+<h2>Saídas</h2>
+<p><a href="{% url 'index' %}">Home</a></p>
+<p><a href="{% url 'saida:new_saida' %}">Nova Saída</a></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Preço unit.</th>
+            <th>Data</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for saida in saidas %}
+        <tr>
+            <th>{{ saida.id }}</th>
+            <td>{{ saida.produto }}</td>
+            <td>{{ saida.quantidade }}</td>
+            <td>{{ saida.preco_unitario }}</td>
+            <td>{{ saida.created }}</td>
+            <td><a href="#">Editar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

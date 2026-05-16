@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block product %}
+
+<h2>Formulario de Saída</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}
