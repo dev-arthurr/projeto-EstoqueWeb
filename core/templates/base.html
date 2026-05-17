@@ -4,14 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'base_styles.css'%}">
+    <link rel="stylesheet" href="{% static 'app_styles.css' %}">
     <title>Django</title>
 </head>
 
 <body>
-    <nav class="nav-base">
-        <h1>Aplicacao EstoqueWEB</h1>
-    </nav>
-    {% block product %} {% endblock %}
+    <div class="container">
+        <nav class="nav-base">
+            <h1>EstoqueWEB</h1>
+            <img src="{% static 'img/logoUgb.png' %}">
+        </nav>
+
+        <div class="inner_container">
+            {% block product %} {% endblock %}
+        </div>
+    </div>
 </body>
 
 </html>

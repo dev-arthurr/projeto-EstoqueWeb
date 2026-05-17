@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block product %}
+<div class="head_content">
+    <h1 class="page_title">Produtos</h1>
 
-<p>Produto</p>
-<a href="{% url 'index' %}">Home</a>
-<a href="{% url 'produto:new_produto' %}">Novo Produto</a>
+    <div class="pageButtons">
+        <a class="btn home" href="{% url 'index' %}">Home</a>
+        <a class="btn new" href="{% url 'produto:new_produto' %}">Novo Produto</a>
+    </div>
+</div>
 
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -13,6 +17,7 @@
             <th>Cor</th>
             <th>Preco</th>
             <th>Quantidade</th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -24,8 +29,8 @@
             <td>{{ produto.cor }}</td>
             <td>{{ produto.preco }}</td>
             <td>{{ produto.quantidade }}</td>
-            <td><a href="{% url 'produto:update_produto' produto.id %}">Update</a></td>
-            <td><a href="{% url 'produto:delete_produto' produto.id %}">Delete</a></td>
+            <td><a class="btnTable updateBtn" href="{% url 'produto:update_produto' produto.id %}">Editar</a></td>
+            <td><a class="btnTable deleteBtn" href="{% url 'produto:delete_produto' produto.id %}">Deletar</a></td>
         </tr>
         {% endfor %}
     </tbody>

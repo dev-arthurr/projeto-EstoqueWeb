@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-base {
+  background: #212121;
+  padding: 20px 50px;
+  width: 100%;
+
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-base h1 {
+  font-size: 45px;
+}
+
+.nav-base img {
+  width: 150px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.inner_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.index_box {
+  max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 60px;
+  padding: 100px;
+
+  border: 1px solid #212121;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.index_box .top_index p {
+  color: #212121;
+  font-size: 30px;
+}
+
+.bottom_index {
+  display: flex;
+  gap: 30px;
+}
+
+.bottom_index p {
+  font-size: 30px;
+  padding: 10px 30px;
+  border-radius: 8px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.bottom_index p:hover {
+  cursor: pointer;
+
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.bottom_index a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.bottom_index .verde {
+  background: rgb(0, 203, 0);
+}
+
+.bottom_index .azul {
+  background: rgb(67, 57, 255);
+}
+
+.bottom_index .vermelho {
+  background: rgb(255, 63, 63);
+}

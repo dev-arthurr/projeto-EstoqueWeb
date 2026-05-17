@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block product %}
+<div class="head_content">
+    <h1 class="page_title">Saidas</h1>
 
-<h2>Saídas</h2>
-<p><a href="{% url 'index' %}">Home</a></p>
-<p><a href="{% url 'saida:new_saida' %}">Nova Saída</a></p>
+    <div class="pageButtons">
+        <a class="btn home" href="{% url 'index' %}">Home</a>
+        <a class="btn new" href="{% url 'saida:new_saida' %}">Nova Saída</a>
+    </div>
+</div>
 
-<table>
+<table class="table">
     <thead>
         <tr>
             <th>ID</th>
@@ -13,6 +17,7 @@
             <th>Quantidade</th>
             <th>Preço unit.</th>
             <th>Data</th>
+            <th></th>
             <th></th>
         </tr>
     </thead>
@@ -24,8 +29,8 @@
             <td>{{ saida.quantidade }}</td>
             <td>{{ saida.preco_unitario }}</td>
             <td>{{ saida.created }}</td>
-            <td><a class="button is-primary" href="{% url 'saida:update_saida' saida.id %}">Editar</a></td>
-            <td><a class="button is-primary" href="{% url 'saida:delete_saida' saida.id %}">Deletar</a></td>
+            <td><a class="btnTable updateBtn" href="{% url 'saida:update_saida' saida.id %}">Editar</a></td>
+            <td><a class="btnTable deleteBtn" href="{% url 'saida:delete_saida' saida.id %}">Deletar</a></td>
         </tr>
         {% endfor %}
     </tbody>

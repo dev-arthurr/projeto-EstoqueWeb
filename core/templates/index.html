@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 
 {% block product %}
-<h1>HOJE</h1>
+<div class="index_box">
+    <div class="top_index">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, molestias labore. Necessitatibus nostrum,
+            magnam
+            sequi dicta tenetur labore possimus! Modi possimus excepturi tenetur hic magnam! Vero nemo illum praesentium
+            perspiciatis.</p>
+    </div>
 
-<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, molestias labore. Necessitatibus nostrum, magnam
-    sequi dicta tenetur labore possimus! Modi possimus excepturi tenetur hic magnam! Vero nemo illum praesentium
-    perspiciatis.</p>
-
-<p><a href="{% url 'produto:list_produto' %}">Produtos</a></p>
-<p><a href="{% url 'entrada:list_entrada' %}">Entradas</a></p>
-<p><a href="{% url 'saida:list_saida' %}">Saidas</a></p>
-
+    <div class="bottom_index">
+        <p class="azul"><a href="{% url 'produto:list_produto' %}">Produtos</a></p>
+        <p class="verde"><a href="{% url 'entrada:list_entrada' %}">Entradas</a></p>
+        <p class="vermelho"><a href="{% url 'saida:list_saida' %}">Saidas</a></p>
+    </div>
+</div>
 {% endblock %}

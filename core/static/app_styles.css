@@ -1,0 +1,102 @@
+.head_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.head_content h1 {
+  font-size: 40px;
+}
+
+.pageButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.pageButtons a {
+  text-decoration: none;
+  color: white;
+  width: 8vw;
+
+  padding: 10px;
+  background: #212121;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.pageButtons a:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pageButtons .new {
+  background: rgb(0, 203, 0);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #212121;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f9fbfd;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #212121;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f7fc;
+  transition: background-color 0.3s ease;
+}
+
+.btnTable {
+  text-decoration: none;
+
+  padding: 8px 10px;
+  text-align: center;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.updateBtn {
+  background: #ffff4e;
+  color: #212121;
+}
+
+.deleteBtn {
+  background: #ff4848;
+  color: #212121;
+}
