@@ -4,4 +4,4 @@ from .models import Saidas
 class SaidaForm(ModelForm):
     class Meta:
         model = Saidas
-        fields = ['produto', 'quantidade', 'preco_unitario']
+        fields = ['produto', 'quantidade']

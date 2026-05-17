@@ -20,9 +20,6 @@ def new_saida(request):
         if form.is_valid():
             saida = form.save(commit=False)
 
-            if not saida.preco_unitario:
-                saida.preco_unitario = Decimal(str(saida.produto.preco))
-
             if saida.quantidade > saida.produto.quantidade:
                 form.add_error('quantidade', 'Estoque insuficiente')
             else:
