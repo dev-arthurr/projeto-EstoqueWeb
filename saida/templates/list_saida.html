@@ -24,7 +24,8 @@
             <td>{{ saida.quantidade }}</td>
             <td>{{ saida.preco_unitario }}</td>
             <td>{{ saida.created }}</td>
-            <td><a href="#">Editar</a></td>
+            <td><a class="button is-primary" href="{% url 'saida:update_saida' saida.id %}">Editar</a></td>
+            <td><a class="button is-primary" href="{% url 'saida:delete_saida' saida.id %}">Deletar</a></td>
         </tr>
         {% endfor %}
     </tbody>
