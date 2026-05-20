@@ -3,16 +3,17 @@
 {% block product %}
 <div class="index_box">
     <div class="top_index">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto, molestias labore. Necessitatibus nostrum,
-            magnam
-            sequi dicta tenetur labore possimus! Modi possimus excepturi tenetur hic magnam! Vero nemo illum praesentium
-            perspiciatis.</p>
+        <p>O EstoqueWeb é um aplicativo desenvolvido em Django com o objetivo de facilitar o controle e gerenciamento de
+            estoque de forma prática e organizada. A aplicação permite cadastrar produtos, acompanhar quantidades
+            disponíveis, registrar entradas e saídas de mercadorias e manter as informações atualizadas em tempo real.
+            Com uma interface simples e funcional, o sistema ajuda empresas a terem maior controle sobre seus produtos,
+            evitando perdas e melhorando a organização do estoque.</p>
     </div>
 
     <div class="bottom_index">
-        <p class="azul"><a href="{% url 'produto:list_produto' %}">Produtos</a></p>
-        <p class="verde"><a href="{% url 'entrada:list_entrada' %}">Entradas</a></p>
-        <p class="vermelho"><a href="{% url 'saida:list_saida' %}">Saidas</a></p>
+        <a class="azul" href="{% url 'produto:list_produto' %}">Produtos</a>
+        <a class="verde" href="{% url 'entrada:list_entrada' %}">Entradas</a>
+        <a class="vermelho" href="{% url 'saida:list_saida' %}">Saidas</a>
     </div>
 </div>
 {% endblock %}

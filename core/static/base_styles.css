@@ -73,7 +73,11 @@
   gap: 30px;
 }
 
-.bottom_index p {
+.bottom_index a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+
   font-size: 30px;
   padding: 10px 30px;
   border-radius: 8px;
@@ -83,17 +87,11 @@
     box-shadow 0.3s ease;
 }
 
-.bottom_index p:hover {
+.bottom_index a:hover {
   cursor: pointer;
 
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.bottom_index a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
 }
 
 .bottom_index .verde {
