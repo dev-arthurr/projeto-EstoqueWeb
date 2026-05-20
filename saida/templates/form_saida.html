@@ -1,12 +1,25 @@
 {% extends 'base.html' %}
 {% block product %}
 
-<h2>Formulario de Saída</h2>
+<div class="form-container">
+    <h1>Formulário de Saidas</h1>
 
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
+    <form method="post" class="form-styles">
+        {% csrf_token %}
 
-    <button type="submit">Salvar</button>
-</form>
+        {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+
+            {% if field.errors %}
+            <span class="error-message">{{ field.errors }}</span>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <button type="submit" class="btn-submit">Salvar</button>
+    </form>
+</div>
+
 {% endblock %}
